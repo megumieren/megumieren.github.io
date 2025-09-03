@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>博客域名备案</title>
+      <link href="/2025/09/03/%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E5%A4%87%E6%A1%88/"/>
+      <url>/2025/09/03/%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E5%A4%87%E6%A1%88/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、购买域名"><a href="#一、购买域名" class="headerlink" title="一、购买域名"></a>一、购买域名</h2><p>我这里使用的是腾讯云。</p><h2 id="二、域名解析"><a href="#二、域名解析" class="headerlink" title="二、域名解析"></a>二、域名解析</h2><p>配置时，只需要将 DNS 配置里面的 A 记录指向这 4 个 IP 地址中的至少一个</p><figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure><p>配置后的状态如下：</p><p><img src="./image-20250903205427722.png" alt="image-20250903205427722"></p><p>其中CNAME那一行的配置是必须的，不然后面github上操作时DNS解析会出问题。</p><h2 id="三、GithubPages操作"><a href="#三、GithubPages操作" class="headerlink" title="三、GithubPages操作"></a>三、GithubPages操作</h2><p><img src="./image-20250903205848541.png" alt="image-20250903205848541"></p><p>在Custom domain下的框框里填上自己刚刚购买的域名，点击Save即可。设置成功后上方会有绿色的提示已发布成功。（github支持自定义域名的 HTTPS 请求，如需配置，可勾选下方的 <code>Enforce HTTPS</code>）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo+Butterfly搭建个人博客网站(二、Butterfly美化网站)</title>
       <link href="/2025/09/03/Hexo-Butterfly%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%88%E4%BA%8C%E3%80%81Butterfly%E7%BE%8E%E5%8C%96%E7%BD%91%E7%AB%99%EF%BC%89/"/>
       <url>/2025/09/03/Hexo-Butterfly%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%88%E4%BA%8C%E3%80%81Butterfly%E7%BE%8E%E5%8C%96%E7%BD%91%E7%AB%99%EF%BC%89/</url>
