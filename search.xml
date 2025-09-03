@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo+Butterfly搭建个人博客网站(一、Hexo初步搭建)</title>
+      <link href="/2025/09/03/Hexo-Butterfly%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%80%E3%80%81Hexo%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%89/"/>
+      <url>/2025/09/03/Hexo-Butterfly%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%80%E3%80%81Hexo%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、Hexo简介"><a href="#一、Hexo简介" class="headerlink" title="一、Hexo简介"></a>一、Hexo简介</h2><p>Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><h2 id="二、安装要求"><a href="#二、安装要求" class="headerlink" title="二、安装要求"></a>二、安装要求</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p><ul><li><a href="http://nodejs.org/">Node.js</a> (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)</li><li><a href="http://git-scm.com/">Git</a></li></ul><h2 id="三、安装Hexo"><a href="#三、安装Hexo" class="headerlink" title="三、安装Hexo"></a>三、安装Hexo</h2><p>准备一个Hexo文件夹，cmd进去。</p><p>1.全局安装<code>hexo-cli</code></p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>2.安装 <code>Hexo</code> 完成后，请执行下列命令，<code>Hexo</code> 将会在指定文件夹中新建所需要的文件。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><p><img src="./image-20250903163317415.png" alt="image-20250903163317415"></p><p>3.跳转到根目录，安装依赖。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>4.最后输入<code>hexo s</code>启动项目。</p><p><img src="./image-20250903163526451.png" alt="image-20250903163526451"></p><p>页面如下：</p><p><img src="./3de143fc3d139b3bbcf2cab5416b80ab.png" alt="img"></p><h2 id="四、Hexo常用指令"><a href="#四、Hexo常用指令" class="headerlink" title="四、Hexo常用指令"></a>四、Hexo常用指令</h2><p>1.<code>new</code>:新建一篇文章</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;title&quot;</span></span><br></pre></td></tr></table></figure><p>2.<code>generate</code>:</p><p>生成 Hexo 博客的静态文件。运行这个命令后，Hexo 会根据你的 Markdown 文件生成对应的 HTML 文件，这些文件会被保存在 <code>public</code> 目录下。你可以通过浏览器访问这个目录下的文件，查看你的博客页面。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate </span><br><span class="line">//可以简写</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure><p>3.<code>server</code>:启动服务</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br><span class="line">//可以简写</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>4.<code>deploy</code>:部署项目</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>5.<code>clean</code>:</p><p>清理 Hexo 生成的缓存和已生成的静态文件。通常在你修改了配置或主题后运行此命令，确保生成的文件是最新的。</p><p>它会删除 <code>public</code> 目录中的所有文件和 <code>_posts</code> 目录中的缓存文件。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure><h2 id="五、快速部署到GitHub服务器"><a href="#五、快速部署到GitHub服务器" class="headerlink" title="五、快速部署到GitHub服务器"></a>五、快速部署到GitHub服务器</h2><h3 id="GitHubPages"><a href="#GitHubPages" class="headerlink" title="GitHubPages"></a>GitHubPages</h3><p><code>GitHub Pages</code> 是 <code>GitHub</code> 上一项免费的托管服务，它可以让用户将静态网页文件、图片、视频和其他媒体文件托管在 <code>GitHub</code> 上，而无需购买虚拟主机或服务器空间。</p><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1.新建仓库"></a>1.新建仓库</h3><p>命名规则：username.github.io(username为你的用户名)。</p><p>创建完仓库后，找到该仓库的http地址，然后复制下来。</p><p><img src="./image-20250903164655652.png" alt="image-20250903164655652"></p><h3 id="2-一键部署"><a href="#2-一键部署" class="headerlink" title="2.一键部署"></a>2.一键部署</h3><p>回到根目录，进入cmd。</p><p>首先安装hexo-deployer-git.</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>第二步在根目录下的<code>_config.yml</code>文件中添加配置。</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/megumieren/megumieren.github.io.git</span> <span class="string">//刚刚复制的http地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>第三步生成静态文件。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g 或者 hexo generate</span><br></pre></td></tr></table></figure><p>最后一步部署。</p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d 或者 hexo deploy</span><br></pre></td></tr></table></figure><p>部署完成后，进入Github仓库页面，点击右上角Settings，然后点击Pages，Deploy from a branch选择master，最后点击save即可。</p><p><img src="./image-20250903165625530.png" alt="image-20250903165625530"></p><p>接着就可以访问username.github.io进入你的在线网站了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2025/09/02/hello-world/"/>
       <url>/2025/09/02/hello-world/</url>
